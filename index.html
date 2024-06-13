@@ -13,7 +13,6 @@
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
-
   <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
   <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
@@ -24,7 +23,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
+  <title>Deep Learning For Cryogenic Electron Microscopy</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -43,6 +42,9 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 
@@ -52,21 +54,37 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">Deep Learning For Cryogenic Electron Microscopy</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="https://scholar.google.com/citations?user=_Cn3jmsAAAAJ&hl=pl" target="_blank">Konrad Karanowski</a><sup>1,*</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="https://scholar.google.com/citations?hl=pl&user=73KAqfMAAAAJ" target="_blank">Mateusz Grzesiuk</a><sup>1,*</sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
+                    Radosław Kuczbański<sup>1,*</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://scholar.google.com/citations?user=XmOBJZYAAAAJ&hl=pl" target="_blank">Maciej Zięba</a><sup>1,2,†</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://scholar.google.com/citations?hl=pl&user=yFzn0owAAAAJ" target="_blank">Jakub Binkowski</a><sup>1,†</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://scholar.google.com/citations?hl=pl&user=0dm7vXcAAAAJ" target="_blank">Lukas Frey</a><sup>3,‡</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://scholar.google.com/citations?hl=pl&user=_ixkwRsAAAAJ" target="_blank">Andrew Rzepiela</a><sup>3,‡</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://scholar.google.com/citations?hl=pl&user=VHpoGC4AAAAJ" target="_blank">Piotr Klukowski</a><sup>3,‡</sup>,</span>
+              </div>
+              
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block">
+                      <sup>1</sup> Wrocław University of Science and Technology, 
+                      <sup>2</sup> Tooploox, 
+                      <sup>3</sup> Federal Institute of Technology Zurich 
+                      <br>R&D Project, Artificial Intelligence 2024</span><br>
+                    <span class="eql-cntrb"><small><sup>*</sup>Student</small></span>
+                    <span class="eql-cntrb"><small><sup>†</sup>Supervisor</small></span>
+                    <span class="eql-cntrb"><small><sup>‡</sup>Collaborator</small></span>
                   </div>
 
                   <div class="column has-text-centered">
@@ -95,12 +113,12 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="#" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
-                    <span>Code</span>
+                    <span>Code (to be released soon)</span>
                   </a>
                 </span>
 
@@ -122,33 +140,20 @@
   </div>
 </section>
 
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3">Problem statement</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Cryogenic electron microscopy (CryoEM) is a groundbreaking imaging technique for macromolecules, allowing 3D reconstructions of their structures to be obtained with near-atomic accuracy. 
+            It involves rapidly freezing samples with the preparation under study and then making a series of films using a transmission electron microscope (TEM), thus obtaining micrographs containing 
+            different projections of the proteins under study. Complex computer algorithms then create a 3D reconstruction based on these. 
+            Unfortunately, despite great success, the technique is not free of problems. The biggest of these is the very low signal-to-noise-ratio (SNR), which can be as low as 0.1.
+            While current methods allow for contrast enhancement on micrographs, they are significantly limited by their deterministic nature, the lack of effective use of image sequence information 
+            and the inability to chunk the signal at higher frequencies. The aim of our project was to propose new methods for denoising micrographs with CryoEM that are able to address the above problems. 
           </p>
         </div>
       </div>
@@ -157,105 +162,137 @@
 </section>
 <!-- End paper abstract -->
 
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%" width="100%">
+        <!-- Your video here -->
+        <source src="https://manifest.prod.boltdns.net/manifest/v1/hls/v4/clear/1964492303001/f9a3c627-e54d-45a2-8016-9205a944d8a0/10s/master.m3u8?fastly_token=NjY2YjdiYmNfODY1NGFlYWFkYjcwOGY0ZWYwMTBhMjZmZTdhOTRmZjA4MGNmYWM0ZTExYzdlMTJhMTc5Mzk3YzJhMWYzOGJiMQ%3D%3D"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        The animation presenting the CryoEM process by <a href="https://www.thermofisher.com/pl/en/home/electron-microscopy/life-sciences/cryo-em/techniques/microed.html?cid=msd_ls_xseg_xmkt_microed_366361_emea_pso_gaw_ib9qjs&gad_source=1&gclid=Cj0KCQjwsaqzBhDdARIsAK2gqndEgh8Cb0F32GxWkUqi9AHg9AvTc2k5ebE4eWh38gXekApTb2_2k_4aAigaEALw_wcB">ThermoFisher Scientific</a>. 
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
 
-<!-- Image carousel -->
+<!-- Effects-->
+
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">The effects</h2>
+      <div class="content has-text-justified">
+        <p>
+          <!-- We selected three challenging CryoEM datasets from the EMPIAR database: 
+        EMPIAR-10297, which contains DPS from Escherichia Coli (<a href="https://www.ebi.ac.uk/empiar/EMPIAR-10297/" target="_blank">Naydenova et al. 2019</a>);
+        EMPIAR-10474, which contains Human Light-Chain Apoferritin (<a href="https://www.ebi.ac.uk/empiar/EMPIAR-10474/", target="_blank">Guo et al. 2020</a>); and
+        EMPIAR-10025, which contains Thermoplasma Acidophilum 20S Proteasome (<a href="https://www.ebi.ac.uk/empiar/EMPIAR-10025/", target="_blank">Campbell et al. 2015</a>). 
+        Each of these datasets was acquired using different microscopes and has different imaging parameters.
+        </p>
+        <img src="static/images/table_dataset.png" alt="Datasets" class="blend-img-background center-image"> -->
+      </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End effects -->
+
+
+<!-- Methods -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
+      <h2 class="title is-3">Proposed methods</h2>
       <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
+      <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/carousel2.jpg" alt="MultiNoise2Noise Schema"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          MultiNoise2Noise Description
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/carousel3.jpg" alt="ShrodParticle schema"/>
         <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
+         ShrödParticle description
        </h2>
      </div>
      <div class="item">
       <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
+      <img src="static/images/cryosharp_schema.png" alt="CryoSharp schema"/>
+      <h2 class="subtitle has-text-centered has-text-justified">
+        Overview of the <i>CryoSharp</i> framework. Our approach consists of four stages. In the stage I, we create a simulated dataset of clean CryoEM particles using TEM Simulator. 
+        In the stage II, we train an unconditional diffusion model on the clean micrographs obtained in the previous step. In the stage III, we train an auxiliary denoiser \( \varphi_{\vartheta} \) on <b>real</b> 
+        CryoEM micrographs and use it to obtain the prior \( \boldsymbol{\pi} \). Finally, in the stage IV we use the prior to recover the clean signal from the micrograph using the reverse process of 
+        the diffusion model from step  \( t=\gamma \) to 0. In order to achieve more likely samples, at each step we replace the low frequencies of the latent variable  \( \hat{\mathbf{y}}_t \) with the low frequencies of 
+        the latent variable \( \boldsymbol{\pi}_t \) using low-pass filter  \( \phi_{N} \).
       </h2>
     </div>
   </div>
 </div>
 </div>
 </section>
-<!-- End image carousel -->
+<!-- End Methods-->
 
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
+<!-- Datasets -->
+<section class="hero is-light">
   <div class="hero-body">
     <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
+      <h2 class="title is-3">Used datasets</h2>
+      <div class="content has-text-justified">
+        <p>
+          We selected three challenging CryoEM datasets from the EMPIAR database: 
+        EMPIAR-10297, which contains DPS from Escherichia Coli (<a href="https://www.ebi.ac.uk/empiar/EMPIAR-10297/" target="_blank">Naydenova et al. 2019</a>);
+        EMPIAR-10474, which contains Human Light-Chain Apoferritin (<a href="https://www.ebi.ac.uk/empiar/EMPIAR-10474/", target="_blank">Guo et al. 2020</a>); and
+        EMPIAR-10025, which contains Thermoplasma Acidophilum 20S Proteasome (<a href="https://www.ebi.ac.uk/empiar/EMPIAR-10025/", target="_blank">Campbell et al. 2015</a>). 
+        Each of these datasets was acquired using different microscopes and has different imaging parameters.
+        </p>
+        <img src="static/images/table_dataset.png" alt="Datasets" class="blend-img-background center-image">
       </div>
-    </div>
   </div>
+</div>
+</div>
 </section>
-<!-- End youtube video -->
+<!-- End Datasets -->
 
 
-<!-- Video carousel -->
+<!-- Results -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
+      <h2 class="title is-3">Results</h2>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/carousel3.jpg" alt="ShrodParticle schema"/>
+        <h2 class="subtitle has-text-centered">
+          Comparison of the results obtained on the DPS from Escherichia Coli (EMPIAR-10297) by <b>ShrödParticle</b> and the reference methods.
+       </h2>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/carousel2.jpg" alt="MultiNoise2Noise Schema"/>
+      <h2 class="subtitle has-text-centered">
+        Comparison of the results obtained on the Human Light-Chain Apoferritin (EMPIAR-10474) by <b>MultiNoise2Noise</b> and the reference methods.
+      </h2>
     </div>
+    <div id="results-carousel" class="carousel results-carousel">
+      <div class="item">
+       <!-- Your image here -->
+       <img src="static/images/cryosharp_results.png" alt="CryoSharp schema"/>
+       <h2 class="subtitle has-text-centered has-text-justified">
+         Comparison of the results obtained on the Thermoplasma Acidophilum 20S Proteasome (EMPIAR-10025) by <b>CryoSharp</b> and the reference methods. <b>CryoSharp</b> uses Noise2Noise as a prior with parameters \( \gamma=450 \) and \( N=32 \).
+       </h2>
+     </div>
   </div>
+</div>
+</div>
 </section>
-<!-- End video carousel -->
-
-
-
+<!-- End Results -->
 
 
 
@@ -275,12 +312,12 @@
 
 
 <!--BibTex citation -->
-  <section class="section" id="BibTeX">
+  <!-- <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>BibTex Code Here</code></pre>
     </div>
-</section>
+</section> -->
 <!--End BibTex citation -->
 
 
