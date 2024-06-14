@@ -104,7 +104,7 @@
 
                     <!-- Supplementary PDF link -->
                     <span class="link-block">
-                      <a href="#" target="_blank"
+                      <a href="/static/pdfs/presentation.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fas fa-file-pdf"></i>
@@ -174,17 +174,22 @@
 <!-- End paper abstract -->
 
 <!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%" width="100%">
-        <!-- Your video here -->
-        <source src="https://manifest.prod.boltdns.net/manifest/v1/hls/v4/clear/1964492303001/f9a3c627-e54d-45a2-8016-9205a944d8a0/10s/master.m3u8?fastly_token=NjY2YjdiYmNfODY1NGFlYWFkYjcwOGY0ZWYwMTBhMjZmZTdhOTRmZjA4MGNmYWM0ZTExYzdlMTJhMTc5Mzk3YzJhMWYzOGJiMQ%3D%3D"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        The animation presenting the CryoEM process by <a href="https://www.thermofisher.com/pl/en/home/electron-microscopy/life-sciences/cryo-em/techniques/microed.html?cid=msd_ls_xseg_xmkt_microed_366361_emea_pso_gaw_ib9qjs&gad_source=1&gclid=Cj0KCQjwsaqzBhDdARIsAK2gqndEgh8Cb0F32GxWkUqi9AHg9AvTc2k5ebE4eWh38gXekApTb2_2k_4aAigaEALw_wcB">ThermoFisher Scientific</a>. 
-      </h2>
+<section class="hero is-small is-small">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Paper video. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <div class="publication-video">
+            <!-- Youtube embed code here -->
+            <iframe src="https://www.youtube.com/embed/6G550DfY75Q" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+          <h2 class="subtitle has-text-centered">
+            The animation presenting the CryoEM process by <a href="https://www2.mrc-lmb.cam.ac.uk" target="_blank">MRC Laboratory of Molecular Biology</a>. 
+          </h2>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -200,6 +205,9 @@
         <p>
           In the course of our work, we carried out an extensive literature review, enabling us to identify the advantages and disadvantages of the methods used to date. 
           We made a selection of datasets, which we processed with the help of RELION. Then, we proposed three proprietary de-noising methods: <b>ShrödParticle</b>, <b>MultiNoise2Noise</b> and <b>CryoSharp</b>.
+          We have been working on three challanging datasets from EMPIAR database: EMPIAR-10297, EMPIAR-10474 and EMPIAR-10025. Our methods outperformed the currently used ones. 
+        </p>
+        <img src="static/images/pipeline_transparent.png" alt="Pipeline" class="blend-img-background center-image">
       </div>
   </div>
 </div>
@@ -216,15 +224,18 @@
       <div class="carousel results-carousel">
         <div class="item">
           <!-- Your image here -->
-          <img src="static/images/carousel2.jpg" alt="MultiNoise2Noise Schema"/>
-          <h2 class="subtitle has-text-centered">
-            MultiNoise2Noise Description
+          <img src="static/images/multinoise2noise_schema.png" alt="MultiNoise2Noise Schema"/>
+          <h2 class="subtitle has-text-centered has-text-justified">
+            Overview of <b>Multi-Noise2Noise Framework</b>. Our approach consists of 3 steps. First, recording obtained from an electron microscope is splitted into \( N \) pairs of inputs and targets, 
+            where \( N \) is the number of frames in the recording. Pairs are constructed by taking a single frame from recording for the target and aggregating the rest of it into one multichannel 
+            image with the target frame masked. Next, the neural network is trained to predict targets from their corresponding inputs. 
+            Finally, the cost function is computed by comparing predictions with targets with \( L_2 \) loss and additionally by computing weighted \( L_2 \) loss between each prediction made for inputs from the same recording.
           </h2>
         </div>
         <div class="item">
           <!-- Your image here -->
-          <img src="static/images/carousel3.jpg" alt="ShrodParticle schema"/>
-          <h2 class="subtitle has-text-centered">
+          <img src="static/images/shrod_particle_schema.png" alt="ShrodParticle schema"/>
+          <h2 class="subtitle has-text-centered has-text-justified">
           ShrödParticle description
         </h2>
         </div>
@@ -271,25 +282,25 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Proposed methods</h2>
+      <h2 class="title is-3">Results</h2>
       <div class="carousel results-carousel">
         <div class="item">
           <!-- Your image here -->
-          <img src="static/images/carousel2.jpg" alt="MultiNoise2Noise Schema"/>
+          <img src="static/images/shrod_particle_results.png" alt="ShrödParticle results"/>
           <h2 class="subtitle has-text-centered">
             Comparison of the results obtained on the DPS from Escherichia Coli (EMPIAR-10297) by <b>ShrödParticle</b> and the reference methods.
           </h2>
         </div>
         <div class="item">
           <!-- Your image here -->
-          <img src="static/images/carousel3.jpg" alt="ShrodParticle schema"/>
+          <img src="static/images/multinoise2noise_results.png" alt="MultiNoise2Noise results"/>
           <h2 class="subtitle has-text-centered">
             Comparison of the results obtained on the Human Light-Chain Apoferritin (EMPIAR-10474) by <b>MultiNoise2Noise</b> and the reference methods.
         </h2>
         </div>
         <div class="item">
           <!-- Your image here -->
-          <img src="static/images/cryosharp_results.png" alt="CryoSharp schema"/>
+          <img src="static/images/cryosharp_results.png" alt="CryoSharp results"/>
           <h2 class="subtitle has-text-centered has-text-justified">
             Comparison of the results obtained on the Thermoplasma Acidophilum 20S Proteasome (EMPIAR-10025) by <b>CryoSharp</b> and the reference methods. <b>CryoSharp</b> uses Noise2Noise as a prior with parameters \( \gamma=450 \) and \( N=32 \).
           </h2>
@@ -308,7 +319,7 @@
     <div class="container">
       <h2 class="title">Poster</h2>
 
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+      <iframe  src="static/pdfs/poster.pdf" width="100%" height="550">
           </iframe>
         
       </div>
