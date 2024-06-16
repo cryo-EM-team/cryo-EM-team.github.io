@@ -132,6 +132,24 @@
                   <span>Pipeline code (to be released soon)</span>
                 </a>
               </span>
+              <span class="link-block">
+                <a href="#" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fab fa-google-drive"></i>
+                </span>
+                <span>Model's weights (to be released soon)</span>
+              </a>
+            </span>
+            <span class="link-block">
+              <a href="#" target="_blank"
+              class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                <i class="fab fa-google-drive"></i>
+              </span>
+              <span>Dataset (to be released soon)</span>
+            </a>
+          </span>
 
                 <!-- ArXiv abstract Link -->
                 <!-- <span class="link-block">
@@ -204,7 +222,7 @@
       <div class="content has-text-justified">
         <p>
           In the course of our work, we carried out an extensive literature review, enabling us to identify the advantages and disadvantages of the methods used to date. 
-          We made a selection of datasets, which we processed with the help of RELION. Then, we proposed three proprietary de-noising methods: <b>ShrödParticle</b>, <b>MultiNoise2Noise</b> and <b>CryoSharp</b>.
+          We made a selection of datasets, which we processed with the help of RELION. Then, we proposed three proprietary de-noising methods: <b>SchrödParticle</b>, <b>MultiNoise2Noise</b> and <b>CryoSharp</b>.
           We have been working on three challanging datasets from EMPIAR database: EMPIAR-10297, EMPIAR-10474 and EMPIAR-10025. Our methods outperformed the currently used ones. 
         </p>
         <img src="static/images/pipeline_transparent.png" alt="Pipeline" class="blend-img-background center-image">
@@ -234,9 +252,9 @@
         </div>
         <div class="item">
           <!-- Your image here -->
-          <img src="static/images/shrod_particle_schema.png" alt="ShrodParticle schema"/>
+          <img src="static/images/schrod_particle_schema.png" alt="SchrödParticle schema"/>
           <h2 class="subtitle has-text-centered has-text-justified">
-          ShrödParticle description
+            <b>SchrödParticle</b> training framework. First, we generate synthetic dataset consisting of pairs of clean and noisy images using TEM Simulator. Then we train the diffusion model in a Schrödinger Bridge manner - where each diffusion step is an interpolation between the clean and the noisy image. Lastly, to denoise the real data, we only do the backwards step of the diffusion process on the images.
         </h2>
         </div>
         <div class="item">
@@ -286,9 +304,9 @@
       <div class="carousel results-carousel">
         <div class="item">
           <!-- Your image here -->
-          <img src="static/images/shrod_particle_results.png" alt="ShrödParticle results"/>
+          <img src="static/images/schrod_particle_results.png" alt="SchrödParticle results"/>
           <h2 class="subtitle has-text-centered">
-            Comparison of the results obtained on the DPS from Escherichia Coli (EMPIAR-10297) by <b>ShrödParticle</b> and the reference methods.
+            Comparison of the results obtained on the DPS from Escherichia Coli (EMPIAR-10297) by <b>SchrödParticle</b> and the reference methods.
           </h2>
         </div>
         <div class="item">
